@@ -20,6 +20,7 @@ $(document).ready(function(){
         $(".ccdate").css("background-color","#d6dbdf");
         $(".class").css("color","#f1c40f");
         $(".cctype").css("color","#f1c40f");
+        $("#fname").focus();
     });
 
     //first name = othertf[0]
@@ -304,11 +305,6 @@ $(document).ready(function(){
 
         else return true;
 
-    }
-
-    function chkcardtype(cv, cm, cd){
-        if (cv || cm || cd) return true;
-        else return false;
     }
 
     function addclass(classtype) {
