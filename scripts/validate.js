@@ -183,7 +183,7 @@ $(document).ready(function(){
     //class
 
     $("input[name='class']").on({
-        blur: function () {
+        change: function () {
             var classchk = $("input[name='class']:checked");
             var classcnt = classchk.length;
             var classmoney = 0;
