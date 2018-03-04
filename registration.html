@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="EN">
+<head>
+    <title>Main Page - Dylan Perez CITE30363 Lab 1</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../CITE30363-Lab1/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../CITE30363-Lab1/scripts/validate.js"></script>
+</head>
+<body>
+<header>
+    <div class="header"><img src="../CITE30363-Lab1/images/logo.png" alt="NCHA Logo" class="header"><h1 class="header">National Cutting Horse Accociation</h1></div><br />
+<hr class="header" />
+<nav>
+<p style="text-align:center;">
+<a href="../CITE30363-Lab1/index.html">Home</a>&emsp;<a href="registration.html">Registration</a>
+</p>
+<hr />
+</nav>
+</header>
+<main>
+    <section>
+        <h2>REGISTER FOR EVENTS</h2>
+        <hr />
+        <form id="reg" method="get" action="http://www.tcu.edu" onsubmit="return validate()">
+        <!-- <form id="reg" method="get" action="" onsubmit="return validate()"> -->
+            <table>
+                <tr>
+                    <td><label>First Name<span class="asterisk">*</span><br /><input type="text" id="fname" name="fname" onclick="tb(0)"/></label></td>
+                    <td><label>Last Name<span class="asterisk">*</span><br /><input type="text" id="lname" name="lname" /></label></td>
+                </tr>
+                <tr>
+                    <td><label>NCHA ID Number<span class="asterisk">*</span><br /><input type="text" id="idnum" name="id" /></label></td>
+                    <td><label>Phone Number<span class="asterisk">*</span><br /><input type="text" id="phone" name="phone" /></label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label>E-mail Address<span class="asterisk">*</span><br /><input type="text" id="email" name="email" size="30" /></label></td>
+                </tr>
+                <tr>
+                    <td><label>Show Date<span class="asterisk">*</span><br />
+                        <select id="date" name="date">
+                            <option value="3172018">Mar 17, 2018</option>
+                            <option value="3242018">Mar 24, 2018</option>
+                            <option value="3312018">Mar 31, 2018</option>
+                            <option value="4072018">Apr 7, 2018</option>
+                        </select></label>
+                    </td>
+                    <td>Class Entry<span class="asterisk">*</span> (Select no more than 3)<br />
+                        <label class="class"><input type="checkbox" name="class" value="open" /> Open - $300<br /></label>
+                        <label class="class"><input type="checkbox" name="class" value="nonpro" /> Non-Pro - $300<br /></label>
+                        <label class="class"><input type="checkbox" name="class" value="25knnp" /> 25K NNP - $250<br /></label>
+                        <label class="class"><input type="checkbox" name="class" value="50kam" /> 50K Amateur - $250<br /></label>
+                        <label class="class"><input type="checkbox" name="class" value="35knp" /> 35K NP - $150<br /></label>
+                        <label class="class"><input type="checkbox" name="class" value="15kam" /> 15K Amateur - $150</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr />Additional Fees<br /></td>
+                </tr>
+                <tr>
+                    <td><label>Stall Rental - $30<input type="checkbox" id="stall" name="stall" value="stall" /></label></td>
+                    <td><label>RV Hookup - $35<input type="checkbox" id="rv" name="rv" value="rv" /></label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr />Payment Information<br /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label>Credit Card Number<span class="asterisk">*</span><br /><input type="text" id="ccnum" name="ccnum" size="30" /></label></td>
+                </tr>
+                <tr>
+                    <td>Card Type<span class="asterisk">*</span><br />
+                        <label class="cctype">Visa <input type="radio" id="visa" name="cctype" value="visa" /></label>
+                        <label class="cctype">MC <input type="radio" id="mc" name="cctype" value="mc" /></label>
+                        <label class="cctype">Discover <input type="radio" id="disc" name="cctype" value="disc" /></label></td>
+                    <td><label>Exp Date<span class="asterisk">*</span><br />
+                        <select class="ccdate" id="ccmonth" name="ccmonth" size="1">
+                            <option value="01">01 - Jan</option>
+                            <option value="02">02 - Feb</option>
+                            <option value="03">03 - Mar</option>
+                            <option value="04">04 - Apr</option>
+                            <option value="05">05 - May</option>
+                            <option value="06">06 - Jun</option>
+                            <option value="07">07 - Jul</option>
+                            <option value="08">08 - Aug</option>
+                            <option value="09">09 - Sep</option>
+                            <option value="10">10 - Oct</option>
+                            <option value="11">11 - Nov</option>
+                            <option value="12">12 - Dec</option>
+                        </select></label>
+                        /
+                        <label><select class="ccdate" id="ccyear" name="ccyear" size="1">
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                        </select></label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr /><label><input type="submit" id="submit" value="Submit Registration" /></label> <label><input type="reset" id="reset" value="Reset Form" /></label></td>
+                </tr>
+            </table>
+        </form>
+        
+        <script>
+            document.forms["reg"] = validate;
+        </script>
+
+        
+    </section>
+</main>
+</body>
+</html>
