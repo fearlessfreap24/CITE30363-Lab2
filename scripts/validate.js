@@ -340,14 +340,6 @@ $(document).ready(function(){
 
     if (!valid) $("#submit").hide();
 
-    // Stall and RV
-
-    var stall = $("#stall :checked");
-    if (stall) money += 30;
-    var rv = $("#rv :checked");
-    if (rv) money += 35;
-    // alert(money);
-
 });
 
 function chkotf(){
