@@ -348,7 +348,10 @@ function chkotf(){
         $("#submit").show();
         return true;
     }
-    else return false;
+    else {
+        $("#submit").hide();
+        return false;
+    }
 }
 
 function validate() {
